@@ -1,0 +1,208 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Jeep Wrangler, moto, dron DJI Avata, violín y más. Fotos y precios.">
+<meta property="og:title" content="Venta de garage">
+<meta property="og:description" content="Jeep Wrangler, moto, dron DJI Avata, violín y más. Fotos y precios.">
+<meta property="og:image" content="https://picassoglitch.github.io/venta/portada.jpg">
+<meta property="og:url" content="https://picassoglitch.github.io/venta/">
+<meta property="og:type" content="website">
+<style>img{max-width:100%}body{margin:0}</style></head><body>
+<title>Venta de Garage</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: one phone-width column of item cards, swipeable photo strip per item, sticky jump bar */
+:root{
+  --bg:#eef0f2; --card:#ffffff; --ink:#16191d; --muted:#5d6670; --line:#d9dde2;
+  --tag:#f2c94c; --tag-ink:#2a2208; --accent:#1f5f8b;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif; --text:"Inter",system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111417;--card:#1a1e23;--ink:#eef1f4;--muted:#9aa4ae;--line:#2b3138;--tag:#e9bf3f;--tag-ink:#231c05;--accent:#7cb7e0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111417;--card:#1a1e23;--ink:#eef1f4;--muted:#9aa4ae;--line:#2b3138;--tag:#e9bf3f;--tag-ink:#231c05;--accent:#7cb7e0;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--text);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
+.wrap{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+header{padding-top:28px;display:flex;flex-direction:column;gap:6px}
+h1{font:800 2.1rem/1.05 var(--display);margin:0;letter-spacing:-.01em;text-wrap:balance}
+.sub{margin:0;color:var(--muted)}
+.how{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.how span{font-size:.82rem;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:4px 10px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-inline:-4px;padding-inline:4px}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:none;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:.85rem;white-space:nowrap}
+nav a b{font-weight:600;color:var(--accent);margin-left:4px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;scroll-margin-top:64px}
+.gal-wrap{position:relative}
+.gal{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;background:#e4e6e9}
+.gal img{flex:none;width:100%;max-width:100%;aspect-ratio:4/3;object-fit:contain;scroll-snap-align:center;background:#e4e6e9}
+.count{position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;font-size:.75rem;padding:3px 8px;border-radius:999px;pointer-events:none}
+.body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:10px}
+.kind{margin:0;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h2{font:700 1.3rem/1.2 var(--display);margin:0;text-wrap:balance}
+.price{margin:0;display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+.tagshape{font:800 1.35rem/1 var(--display);font-variant-numeric:tabular-nums;background:var(--tag);color:var(--tag-ink);padding:7px 12px 7px 20px;border-radius:4px;clip-path:polygon(10px 0,100% 0,100% 100%,10px 100%,0 50%);position:relative}
+.tagshape::before{content:"";position:absolute;left:8px;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:var(--card)}
+.pnote{color:var(--muted);font-size:.9rem}
+.desc{margin:0}
+.facts{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.facts div{border-top:1px solid var(--line);padding-top:6px;min-width:0}
+.facts dt{font-size:.75rem;color:var(--muted)}
+.facts dd{margin:0;font-weight:600}
+h3{margin:4px 0 0;font:700 .95rem var(--display)}
+.incl{margin:0;padding-left:1.1em;display:grid;gap:2px}
+footer{color:var(--muted);font-size:.85rem;text-align:center;padding-top:8px}
+@page{size:letter;margin:12mm}
+@media print{body{padding:0;font-size:11px} nav,.how,.count{display:none} header{padding-top:0} h1{font-size:1.7rem} .wrap{max-width:none;gap:10px} .item{break-inside:avoid;display:grid;grid-template-columns:55% 1fr;border-radius:8px} .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;overflow:visible;background:none} .gal img{width:100%;aspect-ratio:4/3;height:auto} .gal img:first-child{grid-column:1/-1} .gal img:nth-child(n+5){display:none} .body{padding:10px 12px;gap:5px} h2{font-size:1.05rem} .tagshape{font-size:1.05rem} .facts{grid-template-columns:1fr 1fr;gap:4px}}
+</style>
+<div class="wrap">
+<header>
+  <h1>Venta de garage</h1>
+  <p class="sub">Todo usado, funcionando y a buen precio. Precios en pesos mexicanos.</p>
+  <div class="how"><span>Entrega en persona</span><span>Pregunta por WhatsApp</span><span>Precios negociables</span></div>
+</header>
+<nav aria-label="Artículos"><a href="#jeep">Jeep <b>$260,000</b></a><a href="#moto">Moto <b>$50,000</b></a><a href="#avata">Dron <b>$11,500</b></a><a href="#violin">Violín <b>$3,500</b></a><a href="#f1">F1 RC <b>$1,200</b></a><a href="#robot">Robot <b>$1,200</b></a><a href="#walkies">Radios <b>$1,000</b></a><a href="#trackball">Mouse <b>$700</b></a><a href="#echo">Amazon <b>$450</b></a><a href="#audifonos">Audífonos <b>$350</b></a><a href="#cargador">Base <b>$350</b></a><a href="#lamparas">2 <b>$300</b></a><a href="#soporte">Soporte <b>$400</b></a><a href="#stylus">Lápiz <b>$200</b></a></nav>
+<article class="item" id="jeep">
+  <div class="gal-wrap"><div class="gal"><img src="img/jeep_1_p20.jpg" alt="Jeep Wrangler Unlimited Sahara 2011, foto 1" loading="eager"><img src="img/jeep_2_p17.jpg" alt="Jeep Wrangler Unlimited Sahara 2011, foto 2" loading="lazy"><img src="img/jeep_4_p18.jpg" alt="Jeep Wrangler Unlimited Sahara 2011, foto 3" loading="lazy"><img src="img/jeep_6_p09.jpg" alt="Jeep Wrangler Unlimited Sahara 2011, foto 4" loading="lazy"><img src="img/jeep_5_p12.jpg" alt="Jeep Wrangler Unlimited Sahara 2011, foto 5" loading="lazy"><img src="img/jeep_9_p19.jpg" alt="Jeep Wrangler Unlimited Sahara 2011, foto 6" loading="lazy"><img src="img/jeep_8_p14.jpg" alt="Jeep Wrangler Unlimited Sahara 2011, foto 7" loading="lazy"><img src="img/jeep_7_p08.jpg" alt="Jeep Wrangler Unlimited Sahara 2011, foto 8" loading="lazy"></div><span class="count">8 fotos · desliza</span></div>
+  <div class="body">
+    <p class="kind">Vehículo</p>
+    <h2>Jeep Wrangler Unlimited Sahara 2011</h2>
+    <p class="price"><span class="tagshape">$260,000</span><span class="pnote">a tratar</span></p>
+    <p class="desc">Negro, techo de lona (soft top). Listo para carretera y terracería.</p>
+    <dl class="facts"><div><dt>Año</dt><dd>2011</dd></div><div><dt>Versión</dt><dd>Sahara, 4 puertas</dd></div><div><dt>Transmisión</dt><dd>Automática</dd></div><div><dt>Tracción</dt><dd>4x4 funcionando</dd></div><div><dt>Papeles</dt><dd>Factura de salvamento de EE.UU., legalizado</dd></div></dl>
+    <h3>Incluye</h3><ul class="incl"><li>Kit de rines y llantas todo terreno</li><li>Gato Hi-Lift rojo</li><li>Sirena con panel de switches</li><li>Cámara de reversa</li><li>Pantalla con Apple CarPlay y Android Auto</li><li>Cámara de grabación continua frontal y trasera</li><li>Defensa de acero y parrilla tipo “angry”</li><li>Estribos laterales</li></ul>
+  </div>
+</article><article class="item" id="moto">
+  <div class="gal-wrap"><div class="gal"><img src="img/moto_1_p07.jpg" alt="Moto Veloci Xeverus 330R Evo Pro 2026, foto 1" loading="eager"><img src="img/moto_2_p13.jpg" alt="Moto Veloci Xeverus 330R Evo Pro 2026, foto 2" loading="lazy"><img src="img/moto_3_p04.jpg" alt="Moto Veloci Xeverus 330R Evo Pro 2026, foto 3" loading="lazy"><img src="img/moto_4_p06.jpg" alt="Moto Veloci Xeverus 330R Evo Pro 2026, foto 4" loading="lazy"><img src="img/moto_5_p01.jpg" alt="Moto Veloci Xeverus 330R Evo Pro 2026, foto 5" loading="lazy"><img src="img/moto_6_p02.jpg" alt="Moto Veloci Xeverus 330R Evo Pro 2026, foto 6" loading="lazy"><img src="img/moto_7_p03.jpg" alt="Moto Veloci Xeverus 330R Evo Pro 2026, foto 7" loading="lazy"><img src="img/moto_8_p05.jpg" alt="Moto Veloci Xeverus 330R Evo Pro 2026, foto 8" loading="lazy"></div><span class="count">8 fotos · desliza</span></div>
+  <div class="body">
+    <p class="kind">Vehículo</p>
+    <h2>Moto Veloci Xeverus 330R Evo Pro 2026</h2>
+    <p class="price"><span class="tagshape">$50,000</span><span class="pnote">de contado · $60,000 a meses</span></p>
+    <p class="desc">Doble propósito, roja con gráficos XVR. Costó $70,000 nueva.</p>
+    <dl class="facts"><div><dt>Año</dt><dd>2026</dd></div><div><dt>Kilometraje</dt><dd>5,000 km</dd></div><div><dt>Motor</dt><dd>330 cc</dd></div><div><dt>Papeles</dt><dd>Factura original</dd></div></dl>
+    <h3>Incluye</h3><ul class="incl"><li>Cubremanos</li><li>Defensa de motor (crash bar) y sliders</li><li>Control Bluetooth en el manubrio</li><li>Parrilla trasera</li><li>Frenos de disco delantero y trasero</li></ul>
+  </div>
+</article><article class="item" id="avata">
+  <div class="gal-wrap"><div class="gal"><img src="img/avata_1_p48.jpg" alt="Dron DJI Avata (1ª gen) Fly More, foto 1" loading="eager"><img src="img/avata_2_p47.jpg" alt="Dron DJI Avata (1ª gen) Fly More, foto 2" loading="lazy"><img src="img/avata_3_p44.jpg" alt="Dron DJI Avata (1ª gen) Fly More, foto 3" loading="lazy"></div><span class="count">3 fotos · desliza</span></div>
+  <div class="body">
+    <p class="kind">Electrónica</p>
+    <h2>Dron DJI Avata (1ª gen) Fly More</h2>
+    <p class="price"><span class="tagshape">$11,500</span></p>
+    <p class="desc">Dron FPV completo, listo para volar, en su estuche rígido.</p>
+    <dl class="facts"><div><dt>Baterías</dt><dd>3 (incluye 2 extra)</dd></div><div><dt>Visor</dt><dd>DJI Goggles 2</dd></div><div><dt>Control</dt><dd>DJI Motion Controller</dd></div></dl>
+    <h3>Incluye</h3><ul class="incl"><li>Dron DJI Avata</li><li>Goggles 2 con correa y cable</li><li>Motion Controller</li><li>3 baterías y hub de carga</li><li>Hélices de repuesto</li><li>Protector de gimbal y tapa de lentes</li><li>Estuche rígido</li></ul>
+  </div>
+</article><article class="item" id="violin">
+  <div class="gal-wrap"><div class="gal"><img src="img/violin_1_p30.jpg" alt="Violín 4/4 pintado a mano, foto 1" loading="eager"><img src="img/violin_2_p28.jpg" alt="Violín 4/4 pintado a mano, foto 2" loading="lazy"><img src="img/violin_3_p29.jpg" alt="Violín 4/4 pintado a mano, foto 3" loading="lazy"><img src="img/violin_4_p25.jpg" alt="Violín 4/4 pintado a mano, foto 4" loading="lazy"><img src="img/violin_5_p27.jpg" alt="Violín 4/4 pintado a mano, foto 5" loading="lazy"></div><span class="count">5 fotos · desliza</span></div>
+  <div class="body">
+    <p class="kind">Instrumento</p>
+    <h2>Violín 4/4 pintado a mano</h2>
+    <p class="price"><span class="tagshape">$3,500</span></p>
+    <p class="desc">Pieza única: frente plateado con salpicado y voluta morada; atrás dice “NO RULES ONLY MONEY”.</p>
+    <dl class="facts"><div><dt>Tamaño</dt><dd>4/4 (normal)</dd></div><div><dt>Estado</dt><dd>Se puede tocar</dd></div><div><dt>Arte</dt><dd>Edición Aara</dd></div></dl>
+    <h3>Incluye</h3><ul class="incl"><li>Violín</li><li>Arco</li><li>Estuche rígido con forro rojo</li><li>Funda de tela negra</li></ul>
+  </div>
+</article><article class="item" id="f1">
+  <div class="gal-wrap"><div class="gal"><img src="img/f1_1_p49.jpg" alt="Carro RC Red Bull RB18 Checo #11, foto 1" loading="eager"><img src="img/f1_2_p45.jpg" alt="Carro RC Red Bull RB18 Checo #11, foto 2" loading="lazy"></div><span class="count">2 fotos · desliza</span></div>
+  <div class="body">
+    <p class="kind">Juguete</p>
+    <h2>Carro RC Red Bull RB18 Checo #11</h2>
+    <p class="price"><span class="tagshape">$1,200</span></p>
+    <p class="desc">Fórmula 1 a control remoto, escala grande (~38 cm).</p>
+    <dl class="facts"><div><dt>Escala</dt><dd>1:12</dd></div><div><dt>Licencia</dt><dd>Oracle Red Bull Racing</dd></div></dl>
+    
+  </div>
+</article><article class="item" id="robot">
+  <div class="gal-wrap"><div class="gal"><img src="img/robot_1_p42.jpg" alt="Perro robot “Machine” con control, foto 1" loading="eager"><img src="img/robot_2_p46.jpg" alt="Perro robot “Machine” con control, foto 2" loading="lazy"></div><span class="count">2 fotos · desliza</span></div>
+  <div class="body">
+    <p class="kind">Juguete</p>
+    <h2>Perro robot “Machine” con control</h2>
+    <p class="price"><span class="tagshape">$1,200</span></p>
+    <p class="desc">Perro robot a control remoto, camina y hace trucos.</p>
+    
+    <h3>Incluye</h3><ul class="incl"><li>Robot</li><li>Control</li></ul>
+  </div>
+</article><article class="item" id="walkies">
+  <div class="gal-wrap"><div class="gal"><img src="img/walkies_1_p35.jpg" alt="4 radios Midland X-Talker, foto 1" loading="eager"></div></div>
+  <div class="body">
+    <p class="kind">Electrónica</p>
+    <h2>4 radios Midland X-Talker</h2>
+    <p class="price"><span class="tagshape">$1,000</span><span class="pnote">los 4</span></p>
+    <p class="desc">Walkie-talkies recargables. Uno tiene cinta en la antena.</p>
+    <dl class="facts"><div><dt>Cantidad</dt><dd>4 radios</dd></div></dl>
+    <h3>Incluye</h3><ul class="incl"><li>4 radios</li><li>Cables USB de carga</li></ul>
+  </div>
+</article><article class="item" id="trackball">
+  <div class="gal-wrap"><div class="gal"><img src="img/trackball_1_p38.jpg" alt="Mouse trackball ergonómico, foto 1" loading="eager"></div></div>
+  <div class="body">
+    <p class="kind">Computación</p>
+    <h2>Mouse trackball ergonómico</h2>
+    <p class="price"><span class="tagshape">$700</span></p>
+    <p class="desc">Trackball de pulgar con bola roja.</p>
+    
+    
+  </div>
+</article><article class="item" id="echo">
+  <div class="gal-wrap"><div class="gal"><img src="img/echo_1_p37.jpg" alt="Amazon Echo Dot, foto 1" loading="eager"></div></div>
+  <div class="body">
+    <p class="kind">Electrónica</p>
+    <h2>Amazon Echo Dot</h2>
+    <p class="price"><span class="tagshape">$450</span></p>
+    <p class="desc">Bocina inteligente con Alexa, color carbón.</p>
+    
+    
+  </div>
+</article><article class="item" id="audifonos">
+  <div class="gal-wrap"><div class="gal"><img src="img/audifonos_1_p41.jpg" alt="Audífonos gamer con micrófono, foto 1" loading="eager"><img src="img/audifonos_2_p39.jpg" alt="Audífonos gamer con micrófono, foto 2" loading="lazy"></div><span class="count">2 fotos · desliza</span></div>
+  <div class="body">
+    <p class="kind">Computación</p>
+    <h2>Audífonos gamer con micrófono</h2>
+    <p class="price"><span class="tagshape">$350</span></p>
+    <p class="desc">Diadema con micrófono y control de volumen en el cable.</p>
+    <dl class="facts"><div><dt>Conexión</dt><dd>USB + jack 3.5 mm</dd></div></dl>
+    
+  </div>
+</article><article class="item" id="cargador">
+  <div class="gal-wrap"><div class="gal"><img src="img/cargador_1_p33.jpg" alt="Base de carga inalámbrica 3 en 1, foto 1" loading="eager"></div></div>
+  <div class="body">
+    <p class="kind">Electrónica</p>
+    <h2>Base de carga inalámbrica 3 en 1</h2>
+    <p class="price"><span class="tagshape">$350</span></p>
+    <p class="desc">Carga celular, reloj y audífonos al mismo tiempo.</p>
+    
+    
+  </div>
+</article><article class="item" id="lamparas">
+  <div class="gal-wrap"><div class="gal"><img src="img/lamparas_1_p36.jpg" alt="2 lámparas táctiles, foto 1" loading="eager"></div></div>
+  <div class="body">
+    <p class="kind">Hogar</p>
+    <h2>2 lámparas táctiles</h2>
+    <p class="price"><span class="tagshape">$300</span><span class="pnote">las 2</span></p>
+    <p class="desc">Lámparas de buró recargables, se prenden con el toque. Base de madera.</p>
+    
+    
+  </div>
+</article><article class="item" id="soporte">
+  <div class="gal-wrap"><div class="gal"><img src="img/soporte_2_p34.jpg" alt="Soporte para celular con batería Tzumi, foto 1" loading="eager"><img src="img/soporte_1_p31.jpg" alt="Soporte para celular con batería Tzumi, foto 2" loading="lazy"><img src="img/powerbank_1_p32.jpg" alt="Soporte para celular con batería Tzumi, foto 3" loading="lazy"></div><span class="count">3 fotos · desliza</span></div>
+  <div class="body">
+    <p class="kind">Accesorio</p>
+    <h2>Soporte para celular con batería Tzumi</h2>
+    <p class="price"><span class="tagshape">$400</span></p>
+    <p class="desc">Soporte ajustable con pinza para celular y su batería Tzumi Pocket Juice con carga inalámbrica. Van juntos.</p>
+    
+    <h3>Incluye</h3><ul class="incl"><li>Base con brazo ajustable</li><li>Pinza para celular</li><li>Batería Tzumi Pocket Juice</li></ul>
+  </div>
+</article><article class="item" id="stylus">
+  <div class="gal-wrap"><div class="gal"><img src="img/stylus_1_p26.jpg" alt="Lápiz stylus para tablet, foto 1" loading="eager"></div></div>
+  <div class="body">
+    <p class="kind">Accesorio</p>
+    <h2>Lápiz stylus para tablet</h2>
+    <p class="price"><span class="tagshape">$200</span></p>
+    <p class="desc">Lápiz recargable USB-C, color blanco.</p>
+    
+    
+  </div>
+</article>
+<footer>Fotos reales de cada artículo. Se cambió el fondo y se quitó el polvo digitalmente; nada fue reparado ni agregado.<br>Escríbeme para apartar o verlo en persona.</footer>
+</div>
+</body></html>
